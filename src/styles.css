@@ -1,0 +1,74 @@
+body {
+  font-family: sans-serif;
+  background-color: #f7e8f6;
+}
+
+.weatherBox {
+  border: 5px solid;
+  padding: 50px;
+  border-radius: 10px;
+  border-color: #bd83ce;
+  width: 50%;
+  height: 60%;
+  display: block;
+  margin: 30px auto;
+}
+.weatherInput {
+  padding: 15px;
+  width: 60%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.weatherSearch {
+  padding: 15px 25px;
+  background-color: #bd83ce;
+  border: solid;
+  color: #f7e8f6;
+  border-color: #f7e8f6;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.weatherSearch:hover {
+  cursor: pointer;
+  background-color: #e5b0ea;
+}
+.currentLocation {
+  padding: 15px 25px;
+  background-color: #bd83ce;
+  border: solid;
+  color: #f7e8f6;
+  border-color: #f7e8f6;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.currentLocation:hover {
+  cursor: pointer;
+  background-color: #e5b0ea;
+}
+.city {
+  line-height: 1.6;
+  font-size: 18px;
+  margin: 20px auto;
+}
+.cityName {
+  font-size: 32px;
+}
+#degree {
+  display: inline;
+  font-size: 40px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+a {
+  display: inline;
+}
+#Wind {
+  text-align: right;
+}
+
+#Humidity {
+  text-align: right;
+}

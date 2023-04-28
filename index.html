@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="weatherBox">
+        <form action="/submit" class="weather-search">
+          <input
+            class="weatherInput"
+            type="text"
+            placeholder="Type a City .."
+          />
+          <input class="weatherSearch" type="submit" value="Search" />
+          <input class="currentLocation" type="submit" value="Current" />
+
+        </form>
+        <div class="city">
+          <span class="cityName"> <strong> Tehran </strong> <br /> </span>
+          <p class="time">Wednesday 22:00 <br /></p>
+           <p id="weather">  Partly Cloudy </p><br />
+            <p id="degree">
+              <strong> 19°c </strong>
+            </p>
+            <p id="Humidity">
+               Humidity: 76%
+            </p>
+            <p id="Wind">
+              Wind: 5 km/h 
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
