@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
-  background-color: #f7e8f6;
+  background-color: #282626;
+  color: white;
 }
 
 .weatherBox {
@@ -8,7 +9,7 @@ body {
   padding: 50px;
   border-radius: 10px;
   border-color: #bd83ce;
-  width: 50%;
+  width: 60%;
   height: 60%;
   display: block;
   margin: 30px auto;
@@ -47,32 +48,41 @@ body {
   background-color: #e5b0ea;
 }
 .city {
-  line-height: 1.6;
-  font-size: 18px;
-  margin: 20px auto;
+  font-size: 14px;
+  margin: 0px auto;
 }
 .cityName {
   font-size: 32px;
+  margin: 0 auto;
 }
 #degree {
   display: inline;
-  font-size: 40px;
+  font-size: 32px;
 }
 
 a:hover {
   cursor: pointer;
+  color: #e5b0ea;
+  text-decoration: none;
 }
 a {
   display: inline;
+  text-decoration: none;
+  color: plum;
 }
 #Wind {
-  text-align: right;
 }
 
 #Humidity {
-  text-align: right;
 }
 
+#icon {
+  filter: hue-rotate(280deg);
+}
 .footer {
     text-align: center;
+}
+
+.information {
+  margin: 30px auto;
 }

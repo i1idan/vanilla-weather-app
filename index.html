@@ -3,16 +3,16 @@
   <head>
     <title>Weather App</title>
     <meta charset="UTF-8" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <link rel="stylesheet" href="src/styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
   </head>
 
   <body>
@@ -28,20 +28,32 @@
           <input class="currentLocation" type="submit" value="Current" />
 
         </form>
+
         <div class="city">
           <span class="cityName"> <strong> Tehran </strong> <br /> </span>
           <p class="time">Wednesday 22:00 <br /></p>
            <p id="weather">  Partly Cloudy </p><br />
+              <div class="container">
+              <div class="row">
+            <div class="col-8">
+           <img id="icon" src="">
             <p id="degree">
-              <strong> 19°c </strong>
+              <strong> 19 °C | °F </strong>
             </p>
-            <p id="Humidity">
-               Humidity: 76%
-            </p>
+          </div>
+            <div class="col-4">
+              <div class="information">
+        
             <p id="Wind">
               Wind: 5 km/h 
             </p>
-          </span>
+                <p id="Humidity">
+              Humidity: 76%
+            </p>
+            </div>
+            </div>
+            </div>
+        </div>
         </div>
       </div>
     </div>

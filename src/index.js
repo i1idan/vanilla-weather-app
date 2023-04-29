@@ -1,21 +1,15 @@
-let dateValue = document.querySelector(".time");
 
-let now = new Date();
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-var dayNames = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
+  let day = days[now.getDay()];
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  return `${day} ${hours}:${minutes}`;
+  }
 
-let day = dayNames[now.getDay()];
-let hours = now.getHours();
-let minutes = now.getMinutes();
-dateValue.innerHTML = `${day} ${hours}:${minutes}`;
+
 let apiKey = "cb66bf594bf675942f1ebbf913157ef9";
 
 function manipulation(response) {
@@ -24,15 +18,25 @@ function manipulation(response) {
   let tempHolder = document.querySelector("#degree");
   let windHolder = document.querySelector("#Wind");
   let humidityHolder = document.querySelector("#Humidity");
+  let dateHolder = document.querySelector(".time");
+  let iconHolder = document.querySelector("#icon");
+
 
   let temp = Math.round(response.data.main.temp);
   console.log(response.data);
   console.log(temp);
   cityHolder.innerHTML = `<strong> ${response.data.name} </strong>`;
-  tempHolder.innerHTML = `<strong> ${temp}°c </strong>`;
-  weatherHolder.innerHTML = `${response.data.weather[0].main}`;
+  tempHolder.innerHTML = `<strong> ${temp} °C | °F </strong>`;
+  weatherHolder.innerHTML = `${response.data.weather[0].description}`;
   windHolder.innerHTML = `Wind: ${response.data.wind.speed}km/h`;
   humidityHolder.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  dateHolder.innerHTML = `Last Updated: ${formatDate(response.data.dt * 1000)}`;
+  iconHolder.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconHolder.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 let searchElement = document.querySelector(".weatherSearch");
