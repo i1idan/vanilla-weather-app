@@ -86,3 +86,12 @@ a {
 .information {
   margin: 30px auto;
 }
+
+.units .active {
+  color: rgb(255, 255, 255);
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
