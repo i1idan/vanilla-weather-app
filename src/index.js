@@ -23,8 +23,8 @@ function manipulation(response) {
 
   celsiusTemperature = response.data.main.temp;
   let temp = Math.round(response.data.main.temp);
-  console.log(response.data);
-  console.log(temp);
+  // console.log(response.data);
+  // console.log(response.data.name);
   cityHolder.innerHTML = `<strong> ${response.data.name} </strong>`;
   tempHolder.innerHTML = `<strong> ${temp} </strong>`;
   weatherHolder.innerHTML = `${response.data.weather[0].description}`;
@@ -61,19 +61,19 @@ function showTemprature(response) {
 
 let currentElement = document.querySelector(".currentLocation");
 
-function getCurrent(event) {
-  event.preventDefault();
-  function current(position) {
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    console.log(lat, lon);
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-    axios.get(url).then(showTemprature);
-  }
-  navigator.geolocation.getCurrentPosition(current);
-}
+// function getCurrent(event) {
+//   event.preventDefault();
+//   function current(position) {
+//     let lat = position.coords.latitude;
+//     let lon = position.coords.longitude;
+//     console.log(lat, lon);
+//     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+//     axios.get(url).then(showTemprature);
+//   }
+//   navigator.geolocation.getCurrentPosition(current);
+// }
 
-currentElement.addEventListener("click", getCurrent);
+// currentElement.addEventListener("click", getCurrent);
 
 let city = "tehran";
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;

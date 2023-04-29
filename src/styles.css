@@ -9,14 +9,15 @@ body {
   padding: 50px;
   border-radius: 10px;
   border-color: #bd83ce;
-  width: 60%;
+  width: 45%;
   height: 60%;
   display: block;
   margin: 30px auto;
+  box-shadow: 1px 1px 25px darkviolet;
 }
 .weatherInput {
   padding: 15px;
-  width: 60%;
+  width: 70%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .weatherSearch {
