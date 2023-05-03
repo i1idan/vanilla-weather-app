@@ -9,8 +9,8 @@ body {
   padding: 50px;
   border-radius: 10px;
   border-color: #bd83ce;
-  width: 45%;
-  height: 60%;
+  width: 70%;
+  height: 50%;
   display: block;
   margin: 30px auto;
   box-shadow: 1px 1px 25px darkviolet;
@@ -21,7 +21,7 @@ body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .weatherSearch {
-  padding: 15px 25px;
+  padding: 15px 30px;
   background-color: #bd83ce;
   border: solid;
   color: #f7e8f6;
@@ -29,6 +29,11 @@ body {
   border-radius: 10px;
   font-weight: bold;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  width: 25%;
+  box-shadow: 1px 1px 25px darkviolet;
+  border: 5px solid;
+  border-color:  #bd83ce;
+
 }
 .weatherSearch:hover {
   cursor: pointer;
@@ -58,7 +63,11 @@ body {
 }
 #degree {
   display: inline;
+  /* font-size: 16px; */
+}
+#temperature {
   font-size: 32px;
+
 }
 
 a:hover {
@@ -88,6 +97,10 @@ a {
   margin: 30px auto;
 }
 
+.units {
+    font-size: 16px;
+}
+
 .units .active {
   color: rgb(255, 255, 255);
   cursor: default;
@@ -95,4 +108,34 @@ a {
 
 .units .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+
+
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+  color: white;
+  /* border-color: #bd83ce;
+  box-shadow: 1px 1px 10px darkviolet;
+  border: 2px solid; */
+
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+  color: white;
+
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+  color: white;
+
 }
